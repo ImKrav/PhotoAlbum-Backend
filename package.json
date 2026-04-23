@@ -1,0 +1,31 @@
+{
+  "name": "photoalbum-backend",
+  "version": "1.0.0",
+  "description": "PhotoAlbum API — Arquitectura Hexagonal con Express y TypeScript",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "npx ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "lint": "eslint src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImKrav/PhotoAlbum-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
