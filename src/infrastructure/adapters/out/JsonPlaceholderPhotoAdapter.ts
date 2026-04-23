@@ -26,7 +26,7 @@ export class JsonPlaceholderPhotoAdapter implements PhotoRepositoryPort {
       throw new Error(`Error fetching photos: ${response.status} ${response.statusText}`);
     }
 
-    const data: ExternalPhoto[] = await response.json();
+    const data = (await response.json()) as ExternalPhoto[];
 
     return data.map((item) =>
       Photo.create({

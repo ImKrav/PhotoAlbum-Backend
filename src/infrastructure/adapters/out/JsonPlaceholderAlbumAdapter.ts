@@ -16,7 +16,7 @@ export class JsonPlaceholderAlbumAdapter implements AlbumRepositoryPort {
       throw new Error(`Error fetching albums: ${response.status} ${response.statusText}`);
     }
 
-    const data: ExternalAlbum[] = await response.json();
+    const data = (await response.json()) as ExternalAlbum[];
 
     return data.map((item) =>
       Album.create({
